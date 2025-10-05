@@ -1,4 +1,4 @@
-from django.core.validators import MinValue, MaxValue
+from django.core.validators import MinValueValidator, MaxValueValidator
 from django.db import models
 
 # Create your models here.
@@ -17,10 +17,10 @@ class Breed(models.Model):
 
     name = models.CharField(max_length=100)
     size = models.CharField(max_length=10, choices=SIZE_CHOICES)
-    friendliness = models.IntegerField(validators=[MinValue(1), MaxValue(5)])
-    trainability = models.IntegerField(validators=[MinValue(1), MaxValue(5)])
-    shedding_amount = models.IntegerField(validators=[MinValue(1), MaxValue(5)])
-    exercise_needs = models.IntegerField(validators=[MinValue(1), MaxValue(5)])
+    friendliness = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(5)])
+    trainability = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(5)])
+    shedding_amount = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(5)])
+    exercise_needs = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(5)])
    
 
     def __str__(self):
