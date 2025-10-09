@@ -16,14 +16,23 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from rest_framework import routers  
+#from rest_framework import routers  
 from dogapi.views import DogViewSet, BreedViewSet
+from dogapi.view2 import DogList, DogDetail, BreedDetail, BreedList
 
-router = routers.DefaultRouter()
-router.register(r'dogs', DogViewSet, basename='dog')
-router.register(r'breeds', BreedViewSet, basename='breed')
+# router = routers.DefaultRouter()
+# router.register(r'dogs', DogViewSet, basename='dog')
+# router.register(r'breeds', BreedViewSet, basename='breed')
 
 urlpatterns = [
-    path('api/', include(router.urls)),
+    #path('api/', include(router.urls)),
     path('admin/', admin.site.urls),
+
+    path('api/dogs/', DogList.as_view(), name='dog-list'),
+    path('api/dogs/<int:pk>/', DogDetail.as_view(), name='dog-detail'),
+    path('api/breeds/', BreedList.as_view(), name='breed-list'),
+    path('api/breeds/<int:pk>/', BreedDetail.as_view(), name='breed-detail'),
+
+
+
 ]
