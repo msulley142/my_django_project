@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 #from rest_framework import routers  
-from dogapi.views import DogViewSet, BreedViewSet
+#from dogapi.views import DogViewSet, BreedViewSet
 from dogapi.view2 import DogList, DogDetail, BreedDetail, BreedList
 
 # router = routers.DefaultRouter()
