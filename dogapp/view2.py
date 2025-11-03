@@ -8,7 +8,7 @@ from django.shortcuts import get_object_or_404
 
 
 # Version 2
-
+#This function was completed using  Github Copilot Assistant. 
 #Dog Detail, Dog List
 class DogDetail(APIView):
     def get(self, request, pk):
@@ -30,7 +30,7 @@ class DogDetail(APIView):
         return Response(status=status.HTTP_204_NO_CONTENT)
     
 
-
+#This function was completed using  Github Copilot Assistant. 
 class DogList(APIView):
     def get(self, request):
         dogs = Dog.objects.all().select_related('breed').order_by('name')
@@ -44,7 +44,7 @@ class DogList(APIView):
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
-
+#This function was completed using  Github Copilot Assistant. 
 #Breed Detail, Breed List
 class BreedDetail(APIView):
     def get(self, request, pk):
@@ -65,7 +65,7 @@ class BreedDetail(APIView):
         breed.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
     
-
+#This function was completed using  Github Copilot Assistant. 
 class BreedList(APIView):
     def get(self, request):
         breeds = Breed.objects.all().order_by('name')
