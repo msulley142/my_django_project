@@ -1,6 +1,7 @@
 from django.core.validators import MinValueValidator, MaxValueValidator
 from django.db import models
 
+#This function was completed using  Github Copilot Assistant. 
 # Create your models here.
 class Breed(models.Model):
     TINY = 'Tiny'
@@ -25,7 +26,7 @@ class Breed(models.Model):
 
     def __str__(self):
         return self.name
-
+#This function was completed using  Github Copilot Assistant. 
 class Dog(models.Model):
     name = models.CharField(max_length=100)
     age = models.IntegerField()
