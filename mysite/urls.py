@@ -19,6 +19,7 @@ from django.urls import path, include
 from rest_framework import routers  
 from dogapi.views import DogViewSet, BreedViewSet
 
+#The following lines of codes were completed using GitHub Copilot assistant.
 router = routers.DefaultRouter()
 router.register(r'dogs', DogViewSet, basename='dog')
 router.register(r'breeds', BreedViewSet, basename='breed')

@@ -2,7 +2,9 @@ from django.shortcuts import render
 from rest_framework import viewsets
 from .models import Dog, Breed
 from .serializers import DogSerializer, BreedSerializer
+
 # Create your views here.
+#The following lines of codes were completed using GitHub Copilot assistant.
 # Version 1
 class DogViewSet(viewsets.ModelViewSet):
     queryset = Dog.objects.all().select_related('breed').all().order_by('name')
