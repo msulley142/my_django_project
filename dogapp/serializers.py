@@ -1,6 +1,8 @@
 from rest_framework import serializers
 from .models import Dog, Breed
 
+
+#The following functions were completed using GitHub Copilot assistant.
 class DogSerializer(serializers.ModelSerializer):
     breed = serializers.PrimaryKeyRelatedField(queryset=Breed.objects.all())
     

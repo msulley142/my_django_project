@@ -21,5 +21,7 @@ class DogAdmin(admin.ModelAdmin):
 
 
 # Register your models here.
+
 admin.site.register(Dog)
+#The following functions were edited  by and completed using GitHub Copilot assistant.
 admin.site.register(Breed)

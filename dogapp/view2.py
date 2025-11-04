@@ -8,7 +8,7 @@ from django.shortcuts import get_object_or_404
 
 
 # Version 2
-#This function was completed using  Github Copilot Assistant. 
+#This function was completed using  Github Copilot Assistant.
 #Dog Detail, Dog List
 class DogDetail(APIView):
     def get(self, request, pk):

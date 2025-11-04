@@ -24,6 +24,8 @@ from dogapp.view2 import DogList, DogDetail, BreedDetail, BreedList
 # router.register(r'dogs', DogViewSet, basename='dog')
 # router.register(r'breeds', BreedViewSet, basename='breed')
 
+
+#The following lines of codes completed using GitHub Copilot assistant.
 urlpatterns = [
     #path('api/', include(router.urls)),
     path('admin/', admin.site.urls),
